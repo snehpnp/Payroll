@@ -15,24 +15,29 @@ const routes = [
     icon: <FaHome />,
   },
   {
-    path: "/users",
-    name: "Users",
+    path: "/employee",
+    name: "Employee",
     icon: <FaUser />,
+    exact: true,
+    subRoutes: [
+      {
+        path: "/employee/add",
+        name: "Add Employees",
+        icon: <FaUser />,
+      },
+      {
+        path: "/employee/manage",
+        name: "Manage Employees",
+        icon: <FaLock />,
+      },
+   
+    ],
   },
   {
-    path: "/messages",
-    name: "profile",
+    path: "/department",
+    name: "Department",
     icon: <MdMessage />,
-  },
-  {
-    path: "/analytics",
-    name: "salary",
-    icon: <BiAnalyse />,
-  },
-  {
-    path: "/file-manager",
-    name: "File Manager",
-    icon: <AiTwotoneFileExclamation />,
+    exact: true,
     subRoutes: [
       {
         path: "/settings/profile",
@@ -52,9 +57,96 @@ const routes = [
     ],
   },
   {
-    path: "/order",
-    name: "Order",
-    icon: <BsCartCheck />,
+    path: "/attendence",
+    name: "Attendence",
+    icon: <MdMessage />,
+    exact: true,
+    subRoutes: [
+      {
+        path: "/settings/profile",
+        name: "Profile ",
+        icon: <FaUser />,
+      },
+      {
+        path: "/settings/2fa",
+        name: "2FA",
+        icon: <FaLock />,
+      },
+      {
+        path: "/settings/billing",
+        name: "Billing",
+        icon: <FaMoneyBill />,
+      },
+    ],
+  },
+  {
+    path: "/leave",
+    name: "Leave",
+    icon: <MdMessage />,
+    exact: true,
+    subRoutes: [
+      {
+        path: "/settings/profile",
+        name: "Profile ",
+        icon: <FaUser />,
+      },
+      {
+        path: "/settings/2fa",
+        name: "2FA",
+        icon: <FaLock />,
+      },
+      {
+        path: "/settings/billing",
+        name: "Billing",
+        icon: <FaMoneyBill />,
+      },
+    ],
+  },
+  {
+    path: "/payroll",
+    name: "Payroll}",
+    icon: <MdMessage />,
+    exact: true,
+    subRoutes: [
+      {
+        path: "/settings/profile",
+        name: "Profile ",
+        icon: <FaUser />,
+      },
+      {
+        path: "/settings/2fa",
+        name: "2FA",
+        icon: <FaLock />,
+      },
+      {
+        path: "/settings/billing",
+        name: "Billing",
+        icon: <FaMoneyBill />,
+      },
+    ],
+  },
+  {
+    path: "/Holiday",
+    name: "Holiday",
+    icon: <BiAnalyse />,
+    exact: true,
+    subRoutes: [
+      {
+        path: "/settings/profile",
+        name: "Profile ",
+        icon: <FaUser />,
+      },
+      {
+        path: "/settings/2fa",
+        name: "2FA",
+        icon: <FaLock />,
+      },
+      {
+        path: "/settings/billing",
+        name: "Billing",
+        icon: <FaMoneyBill />,
+      },
+    ],
   },
   {
     path: "/settings",
@@ -80,14 +172,17 @@ const routes = [
     ],
   },
   {
-    path: "/saved",
-    name: "Saved",
-    icon: <AiFillHeart />,
+    path: "/logout",
+    name: "Logout",
+    icon: <BsCartCheck />,
   },
+ 
+ 
 ];
 
+
 const SideBar = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const toggle = () => setIsOpen(!isOpen);
   const inputAnimation = {
     hidden: {

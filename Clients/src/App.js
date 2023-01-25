@@ -3,7 +3,7 @@ import SideBar from "./components/Sidebar/SideBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Dashboard from "./pages/Dashboard";
-import Users from "./pages/Users";
+import Employee from "./pages/Employee";
 import Messages from "./pages/Messages";
 import FileManager from "./pages/FileManager";
 import Analytics from "./pages/Analytics";
@@ -16,7 +16,7 @@ function App() {
       <SideBar>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/users" element={<Users />} />
+          <Route path="/employee" element={<Employee />} />
           <Route path="/messages" element={<Messages />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/file-manager" element={<FileManager />} />

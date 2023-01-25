@@ -19,7 +19,7 @@ main {
 
 /* Sidebar */
 .sidebar {
-  background: rgb(0, 7, 61);
+  background: rgb(94, 109, 216);
   color: white;
   height: 100vh;
   overflow-y: auto;
@@ -74,12 +74,12 @@ main {
 }
 .link:hover {
   border-right: 4px solid white;
-  background: rgb(45, 51, 89);
+  background: rgb(94, 109, 216);
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 .active {
   border-right: 4px solid white;
-  background: rgb(45, 51, 89);
+  background: rgb(94, 109, 216);
 }
 .link_text {
   white-space: nowrap;
