@@ -15,7 +15,7 @@ const routes = [
     icon: <FaHome />,
   },
   {
-    path: "/employee",
+    // path: "/employee",
     name: "Employee",
     icon: <FaUser />,
     exact: true,

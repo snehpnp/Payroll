@@ -1,8 +1,10 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
+
+
 
 .main-container {
   display: flex;
@@ -71,6 +73,7 @@ main {
   padding: 5px 10px;
   border-right: 4px solid transparent;
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  text-decoration: none;
 }
 .link:hover {
   border-right: 4px solid white;
@@ -84,6 +87,7 @@ main {
 .link_text {
   white-space: nowrap;
   font-size: 15px;
+  
 }
 
 .menu {
@@ -106,4 +110,15 @@ main {
 .menu_container .link {
   padding-left: 20px;
   border-bottom: #fff 0.5px solid;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
