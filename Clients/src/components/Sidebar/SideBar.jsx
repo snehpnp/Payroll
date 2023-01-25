@@ -243,11 +243,12 @@ const SideBar = ({ children }) => {
             </AnimatePresence>
           </div>
           <section className="routes">
-            {routes.map((route, index) => {
+            {routes.map((route, index)  => {
               if (route.subRoutes) {
                 return (
                   <SidebarMenu
-                    setIsOpen={setIsOpen}
+                  setIsOpen={setIsOpen}
+                  key={route.name}
                     route={route}
                     showAnimation={showAnimation}
                     isOpen={isOpen}
