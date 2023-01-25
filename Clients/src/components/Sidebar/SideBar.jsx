@@ -40,20 +40,16 @@ const routes = [
     exact: true,
     subRoutes: [
       {
-        path: "/settings/profile",
-        name: "Profile ",
+        path: "/department/add",
+        name: "Add Department",
         icon: <FaUser />,
       },
       {
-        path: "/settings/2fa",
-        name: "2FA",
+        path: "/department/manage",
+        name: "Manage Department",
         icon: <FaLock />,
       },
-      {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
-      },
+   
     ],
   },
   {
@@ -63,20 +59,16 @@ const routes = [
     exact: true,
     subRoutes: [
       {
-        path: "/settings/profile",
-        name: "Profile ",
+        path: "/attendence/daily",
+        name: "Daily Attendence",
         icon: <FaUser />,
       },
       {
-        path: "/settings/2fa",
-        name: "2FA",
+        path: "/department/manage",
+        name: "Manage Department",
         icon: <FaLock />,
       },
-      {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
-      },
+   
     ],
   },
   {
@@ -86,66 +78,51 @@ const routes = [
     exact: true,
     subRoutes: [
       {
-        path: "/settings/profile",
-        name: "Profile ",
+        path: "/leave/add",
+        name: "Add Leave ",
         icon: <FaUser />,
       },
       {
-        path: "/settings/2fa",
-        name: "2FA",
+        path: "/leave/manage",
+        name: "Manage Leave",
         icon: <FaLock />,
-      },
-      {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
-      },
+      }
     ],
   },
   {
     path: "/payroll",
-    name: "Payroll}",
+    name: "Payroll",
     icon: <MdMessage />,
     exact: true,
     subRoutes: [
       {
-        path: "/settings/profile",
-        name: "Profile ",
+        path: "/payslip/add",
+        name: "Create Payslip ",
         icon: <FaUser />,
       },
       {
-        path: "/settings/2fa",
-        name: "2FA",
+        path: "/payslip/list",
+        name: "Payslp List",
         icon: <FaLock />,
-      },
-      {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
-      },
+      }
     ],
   },
   {
-    path: "/Holiday",
+    path: "/holiday",
     name: "Holiday",
     icon: <BiAnalyse />,
     exact: true,
     subRoutes: [
       {
-        path: "/settings/profile",
-        name: "Profile ",
+        path: "/holiday/add",
+        name: "Create Holiday ",
         icon: <FaUser />,
       },
       {
-        path: "/settings/2fa",
-        name: "2FA",
+        path: "/holiday/manage",
+        name: "Manage Holiday",
         icon: <FaLock />,
-      },
-      {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
-      },
+      }
     ],
   },
   {
@@ -155,15 +132,11 @@ const routes = [
     exact: true,
     subRoutes: [
       {
-        path: "/settings/profile",
-        name: "Profile ",
+        path: "/settings/change-password",
+        name: "Change Password ",
         icon: <FaUser />,
       },
-      {
-        path: "/settings/2fa",
-        name: "2FA",
-        icon: <FaLock />,
-      },
+      
       {
         path: "/settings/billing",
         name: "Billing",
