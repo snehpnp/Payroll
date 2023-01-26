@@ -1,9 +1,19 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
+}
 
+.container{
+
+  width: 800px;
+  display: flex;
+}
+
+.edit_information{
+  /* width: 50%; */
+  border: rgb(142, 117, 117);
+}
 
 
 .main-container {
