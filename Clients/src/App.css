@@ -87,7 +87,7 @@ main {
 }
 .link:hover {
   border-right: 4px solid white;
-  background: rgb(94, 109, 216);
+  color: #fff;
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 .active {
@@ -131,4 +131,26 @@ main {
 .example {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+/* Table */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }

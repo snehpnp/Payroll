@@ -15,32 +15,35 @@ import Order from "./pages/Order";
 import Saved from "./pages/Saved";
 import Setting from "./pages/Setting";
 import ManageEmployees from "./pages/ManageEmployee";
+import View from "./pages/View";
 
 function App() {
   return (
     <>
 
-<Router>
-      <SideBar>
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/employee/add" element={<AddEmployee />} />
-          <Route path="/employee/manage" element={<ManageEmployees />} />
+      <Router>
+        <SideBar>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/employee/add" element={<AddEmployee />} />
+            <Route path="/employee/manage" element={<ManageEmployees />} />
+            <Route path="/employee/view" element={<View />} />
 
 
-          <Route path="/messages" element={<Messages />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/file-manager" element={<FileManager />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/saved" element={<Saved />} />
-          <Route path="/settings" element={<Setting />} />
 
-          <Route path="*" element={<> not found</>} />
-        </Routes>
-      </SideBar>
-    </Router>
+            <Route path="/messages" element={<Messages />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/file-manager" element={<FileManager />} />
+            <Route path="/order" element={<Order />} />
+            <Route path="/saved" element={<Saved />} />
+            <Route path="/settings" element={<Setting />} />
+
+            <Route path="*" element={<> not found</>} />
+          </Routes>
+        </SideBar>
+      </Router>
     </>
-  
+
   );
 }
 

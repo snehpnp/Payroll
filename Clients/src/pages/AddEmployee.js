@@ -1,4 +1,17 @@
+import React, { useState } from 'react';
 const AddEmployee = () => {
+
+  const [txt, setTxt] = useState('');
+ 
+  const onInputChange = e => {
+    const { value } = e.target;
+    // console.log('Input value: ', value);
+ 
+    const re = /^[A-Za-z]+$/;
+    if (value === "" || re.test(value)) {
+      setTxt(value);
+    }
+  }
   return (
     <>
       <div className="title"> Add Employee</div>
@@ -18,7 +31,7 @@ const AddEmployee = () => {
                 <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                   <div className="form-group">
                     <label className="profile_details_text">First Name:</label>
-                    <input type="text" name="first_name" className="form-control" placeholder="First Name" />
+                    <input type="text" name="first_name" className="form-control" style={{"textTransform":"capitalize"}} value={txt}  onChange={onInputChange} placeholder="First Name" />
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -159,7 +172,7 @@ const AddEmployee = () => {
 
             <div className="Documents">
 
-              <h3 className="text-left">Documents</h3>    <hr />
+              <h3 className="text-left">Company Documents</h3>    <hr />
 
               <div className="row">
                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -406,7 +419,7 @@ const AddEmployee = () => {
               <div className="row">
                 <div className=" submit">
                   <div className="form-group">
-                    <input type="submit" className="col-lg-12 col-md-12 col-sm-12 col-xs-12 btn btn-success" defaultValue="Submit" />
+                    <input type="submit" className="col-lg-12 col-md-12 col-sm-12 col-xs-12 btn btn-success"  />
                   </div>
                 </div>
               </div>

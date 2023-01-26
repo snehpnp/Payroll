@@ -260,8 +260,8 @@ const SideBar = ({ children }) => {
                 <NavLink
                   to={route.path}
                   key={index}
-                  className="link"
-                  activeClassName="active"
+                  className="link active"
+                
                 >
                   <div className="icon">{route.icon}</div>
                   <AnimatePresence>

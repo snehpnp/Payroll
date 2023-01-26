@@ -1,9 +1,10 @@
 import React from 'react';
 import DataTable from 'react-data-table-component';
 import DataTableExtensions from "react-data-table-component-extensions";
-
+import {useNavigate} from "react-router-dom"
 
 function ManageEmployee() {
+  const navigate = useNavigate();
 
   const columns = [
     {
@@ -12,18 +13,22 @@ function ManageEmployee() {
     },
     {
       name: 'Name',
+      width: '150px !important',
       selector: row => row.title,
     },
     {
       name: 'Email',
-      selector: row => row.year,
+      width: '150px !important',
+      selector: row => row.email,
     },
     {
       name: 'Department',
+      width: '160px !important',
       selector: row => row.title,
     },
     {
       name: 'Department',
+      width: '160px !important',
       selector: row => row.title,
     },
     {
@@ -35,27 +40,22 @@ function ManageEmployee() {
       width: '120px !important',
       selector: row => (
         <>
-        <button class="btn btn-success" type="button" id="dropdownMenuButton" style={{"width":"80px","backgroundColor":"#3CD923"}}>
-            View
+        <button className="" type="button" style={{"width":"80px","backgroundColor":"#3CD923","borderRadius":"4px"}}  >
+        <i className="fa-solid fa-pen-to-square"></i> ACTION
           </button>
         </>
       ),
     },
     {
       name: <h6>Actions</h6>,
-      width: '320px !important',
+      width: '120px !important',
       cell: (row) => (
 
         <>
-          <button class="btn btn-secondary" type="button" id="dropdownMenuButton" style={{"backgroundColor":"#33EEBE","marginLeft":"5px"}}>
-          <i class="fa-duotone fa-eye"></i> View
-          </button>
-          <button class="btn btn-secondary" type="button" id="dropdownMenuButton" style={{"backgroundColor":"#6259F1","marginLeft":"5px"}}>
-            Edit
-          </button>
-          <button class="btn btn-secondary" type="button" id="dropdownMenuButton"style={{"backgroundColor":"#EA451E","marginLeft":"5px"}}>
-            Delete
-          </button>
+         
+          <h6><i className="fa-solid fa-eye" onClick={()=>navigate("/employee/view")}></i> </h6>
+         <h6><i className="fa-solid fa-pen-to-square" style={{"marginLeft":"10px"}}></i></h6>
+         <h6> <i className="fa-solid fa-trash" style={{"marginLeft":"10px"}}></i></h6>
           
         </>
       ),
@@ -70,24 +70,70 @@ function ManageEmployee() {
       id: 1,
       title: 'Beetlejuice',
       year: '1988',
+      email:"Sneh@gamial.com"
     },
     {
       id: 2,
       title: 'Ghostbusters',
       year: '1984',
+      email:"Sneh@gamial.com"
+
     },
     {
       id: 3,
       title: 'Ghostbusters',
       year: '1984',
+      email:"Sneh@gamial.com"
+
     }, {
       id: 4,
       title: 'Ghostbusters',
       year: '1984',
+      email:"Sneh@gamial.com"
+
     }, {
       id: 5,
       title: 'Ghostbusters',
       year: '1984',
+      email:"Sneh@gamial.com"
+
+    },
+    {
+      id: 5,
+      title: 'Ghostbusters',
+      year: '1984',
+      email:"Sneh@gamial.com"
+
+    },{
+      id: 5,
+      title: 'Ghostbusters',
+      year: '1984',
+      email:"Sneh@gamial.com"
+
+    },{
+      id: 5,
+      title: 'Ghostbusters',
+      year: '1984',
+      email:"Sneh@gamial.com"
+
+    },{
+      id: 5,
+      title: 'Ghostbusters',
+      year: '1984',
+      email:"Sneh@gamial.com"
+
+    },{
+      id: 5,
+      title: 'Ghostbusters',
+      year: '1984',
+      email:"Sneh@gamial.com"
+
+    },{
+      id: 5,
+      title: 'Ghostbusters',
+      year: '1984',
+      email:"Sneh@gamial.com"
+
     },
   ]
 
@@ -98,9 +144,10 @@ function ManageEmployee() {
     headCells: {
       style: {
         fontWeight: '700',
-        // margin:' 19px 0px',
+        marginTop:"10px" ,
         backgroundColor: '#000',
         color: '#fff',
+        
 
         justifyContent: 'center !important',
         overflow: 'visible !important',
@@ -115,6 +162,7 @@ function ManageEmployee() {
       style: {
         overflow: 'visible !important',
         justifyContent: 'center !important',
+        textAlign:"right"
       },
     },
   };
