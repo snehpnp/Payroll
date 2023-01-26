@@ -14,13 +14,20 @@ import Analytics from "./pages/Analytics";
 import Order from "./pages/Order";
 import Saved from "./pages/Saved";
 import Setting from "./pages/Setting";
+import ManageEmployees from "./pages/ManageEmployee";
+
 function App() {
   return (
-    <Router>
+    <>
+
+<Router>
       <SideBar>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="//employee/add" element={<AddEmployee />} />
+          <Route path="/employee/add" element={<AddEmployee />} />
+          <Route path="/employee/manage" element={<ManageEmployees />} />
+
+
           <Route path="/messages" element={<Messages />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/file-manager" element={<FileManager />} />
@@ -32,6 +39,8 @@ function App() {
         </Routes>
       </SideBar>
     </Router>
+    </>
+  
   );
 }
 
