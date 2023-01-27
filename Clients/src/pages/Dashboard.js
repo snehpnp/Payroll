@@ -8,7 +8,9 @@ const Dashboard = () => {
 
   return (
     <>
+  <div className="title"> Dashboard</div>;
 
+    
       <div id="root">
         <div className="container pt-5">
           <div className="row align-items-stretch">
