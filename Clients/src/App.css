@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 .container{
 
@@ -19,9 +19,9 @@
 .main-container {
   display: flex;
 }
-main {
+/* main {
   padding: 10px;
-}
+} */
 
 .title {
   font-size: 3rem;
@@ -86,13 +86,15 @@ main {
   text-decoration: none;
 }
 .link:hover {
-  border-right: 4px solid white;
-  color: #fff;
+  border-right:rgb(240, 236, 230);
+  color: rgb(209, 208, 208);
+  background: rgb(240, 180, 14);
+
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 .active {
-  border-right: 4px solid white;
-  background: rgb(94, 109, 216);
+  color: rgb(209, 208, 208);
+  background: rgb(240, 180, 14);
 }
 .link_text {
   white-space: nowrap;
@@ -138,7 +140,7 @@ main {
   padding-right:30px;
 }
 
-/* Table */
+Table
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -151,6 +153,33 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+
+
+.AddDepartment{
+  margin-top: 10px;
+}
+.AddDepartmentbox{
+  margin-left: 200px;
+  margin-right: 10px;
+  margin-top: 100px;
+
+}
+
+#flexbox {
+  display: flex;
+ margin-top: 25px;
+ justify-content: left;
+ text-align: left;
+}
+
+.manageEmplotee{
+  border: 1px solid #e2d2d2;
+  /* padding-top: 50px; */
+  /* padding-left: 50px; */
+  /* padding-right: 50px; */  
+  text-align: end;
+}
+
+.manageDeparment{
+  text-align: start;
 }

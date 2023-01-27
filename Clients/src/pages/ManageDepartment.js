@@ -3,23 +3,14 @@ import DataTable from 'react-data-table-component';
 import DataTableExtensions from "react-data-table-component-extensions";
 import {useNavigate} from "react-router-dom"
 
-function ManageEmployee() {
+function ManageDepartment() {
   const navigate = useNavigate();
 
   const columns = [
     {
       name: 'Serial',
-      selector: row => row.id,
-    },
-    {
-      name: 'Name',
-      width: '150px !important',
-      selector: row => row.title,
-    },
-    {
-      name: 'Email',
-      width: '150px !important',
-      selector: row => row.email,
+      width: '100px !important',
+      selector: (row,index) => index+1,
     },
     {
       name: 'Department',
@@ -27,25 +18,26 @@ function ManageEmployee() {
       selector: row => row.title,
     },
     {
-      name: 'Department',
-      width: '160px !important',
-      selector: row => row.title,
-    },
+        name: 'Department',
+        width: '160px !important',
+        selector: row => row.title,
+      }, {
+        name: 'Department',
+        width: '160px !important',
+        selector: row => row.title,
+      },
+  
     {
       name: 'Designation',
+      width: '160px !important',
       selector: row => row.year,
     },
     {
-      name: 'Status',
-      width: '120px !important',
-      selector: row => (
-        <>
-        <button className="" type="button" style={{"width":"80px","backgroundColor":"#3CD923","borderRadius":"4px"}}  >
-        <i className="fa-solid fa-pen-to-square"></i> ACTION
-          </button>
-        </>
-      ),
-    },
+        name: 'Total Employee',
+        width: '160px !important',
+        selector: row => row.title,
+      },
+   
     {
       name: <h6>Actions</h6>,
       width: '120px !important',
@@ -53,7 +45,6 @@ function ManageEmployee() {
 
         <>
          
-          <h6><i className="fa-solid fa-eye" onClick={()=>navigate("/employee/view")}></i> </h6>
          <h6><i className="fa-solid fa-pen-to-square" style={{"marginLeft":"10px"}}></i></h6>
          <h6> <i className="fa-solid fa-trash" style={{"marginLeft":"10px"}}></i></h6>
           
@@ -174,8 +165,8 @@ function ManageEmployee() {
     <>
       {/* <h5 className="title"> Manage Employe</h5><hr /> */}
 
-          <div className="manageEmplotee">
-
+          <div className="manageDeparment">
+      
             <DataTableExtensions
               columns={columns}
               data={data}
@@ -191,7 +182,7 @@ function ManageEmployee() {
                 pagination
                 customStyles={customStyles}
                 highlightOnHover
-                paginationRowsPerPageOptions={[10, 50, 100]}
+                paginationRowsPerPageOptions={[5, 50, 100]}
                 paginationComponentOptions={{ selectAllRowsItem: true, selectAllRowsItemText: 'All' }}
               />
             </DataTableExtensions>
@@ -203,4 +194,4 @@ function ManageEmployee() {
   )
 }
 
-export default ManageEmployee
+export default ManageDepartment

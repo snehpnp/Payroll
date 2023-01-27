@@ -2,10 +2,18 @@ import "./App.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SideBar from "./components/Sidebar/SideBar";
+import Navbar from "./components/Sidebar/Navbar";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// asdfghj
+
 import Dashboard from "./pages/Dashboard";
+
 import AddEmployee from "./pages/AddEmployee";
+import ManageEmployees from "./pages/ManageEmployee";
+import View from "./pages/View";
+
+import AddDepartment from "./pages/AddDepartment"; 
+import ManageDepartment from "./pages/ManageDepartment";
 
 
 import Messages from "./pages/Messages";
@@ -14,8 +22,6 @@ import Analytics from "./pages/Analytics";
 import Order from "./pages/Order";
 import Saved from "./pages/Saved";
 import Setting from "./pages/Setting";
-import ManageEmployees from "./pages/ManageEmployee";
-import View from "./pages/View";
 
 function App() {
   return (
@@ -23,11 +29,17 @@ function App() {
 
       <Router>
         <SideBar>
+      <Navbar/>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/employee/add" element={<AddEmployee />} />
             <Route path="/employee/manage" element={<ManageEmployees />} />
             <Route path="/employee/view" element={<View />} />
+
+            <Route path="/department/add" element={<AddDepartment />} />
+            <Route path="/department/manage" element={<ManageDepartment />} />
+
+
 
 
 

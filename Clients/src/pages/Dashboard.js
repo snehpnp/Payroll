@@ -8,6 +8,7 @@ const Dashboard = () => {
 
   return (
     <>
+
       <div id="root">
         <div class="container pt-5">
           <div class="row align-items-stretch">
@@ -59,6 +60,9 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+        {/* <div className="title"> Dashboard</div>; */}
+
+    
 
     </>
   )

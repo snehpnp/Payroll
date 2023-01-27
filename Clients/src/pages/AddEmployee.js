@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 const AddEmployee = () => {
 
   const [txt, setTxt] = useState('');
- 
+
   const onInputChange = e => {
     const { value } = e.target;
     // console.log('Input value: ', value);
- 
+
     const re = /^[A-Za-z]+$/;
     if (value === "" || re.test(value)) {
       setTxt(value);
@@ -31,7 +31,7 @@ const AddEmployee = () => {
                 <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                   <div className="form-group">
                     <label className="profile_details_text">First Name:</label>
-                    <input type="text" name="first_name" className="form-control" style={{"textTransform":"capitalize"}} value={txt}  onChange={onInputChange} placeholder="First Name" />
+                    <input type="text" name="first_name" className="form-control" style={{ "textTransform": "capitalize" }} value={txt} onChange={onInputChange} placeholder="First Name" />
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -103,8 +103,8 @@ const AddEmployee = () => {
                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div className="form-group">
                     <label className="profile_details_text">Local Address:</label>
-                    {/* <input type="tel" name="phone" className="form-control" placeholder="Local Address" /> */}
-                    <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Enter your Local Address" ></textarea>
+                    {/* <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> */}
+                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
                 </div>
               </div>
@@ -113,7 +113,8 @@ const AddEmployee = () => {
                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div className="form-group">
                     <label className="profile_details_text">Parmanent Address:</label>
-                    <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Parmanent Address"></textarea>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
 
                   </div>
                 </div>
@@ -419,7 +420,7 @@ const AddEmployee = () => {
               <div className="row">
                 <div className=" submit">
                   <div className="form-group">
-                    <input type="submit" className="col-lg-12 col-md-12 col-sm-12 col-xs-12 btn btn-success"  />
+                    <input type="submit" className="col-lg-12 col-md-12 col-sm-12 col-xs-12 btn btn-success" />
                   </div>
                 </div>
               </div>

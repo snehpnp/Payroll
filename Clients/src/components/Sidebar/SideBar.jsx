@@ -221,9 +221,9 @@ const SideBar = ({ children }) => {
               )}
             </AnimatePresence>
 
-            <div className="bars">
+            {/* <div className="bars">
               <FaBars onClick={toggle} />
-            </div>
+            </div> */}
           </div>
           <div className="search">
             <div className="search_icon">
@@ -260,7 +260,7 @@ const SideBar = ({ children }) => {
                 <NavLink
                   to={route.path}
                   key={index}
-                  className="link active"
+                  className="link"
                 
                 >
                   <div className="icon">{route.icon}</div>
