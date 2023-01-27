@@ -40,14 +40,14 @@ function AddDepartment() {
                     {/* <hr /> */}
                     <div id="flexbox" style={{ "textAlign": "center", "gap": "5px" }}>
                         <div>
-                            <button style={{ "flex": "1 1 auto" }} type="button" class="btn btn-light">Cancel</button>
+                            <button style={{ "flex": "1 1 auto" }} type="button" className="btn btn-light">Cancel</button>
                         </div>
                         <div>
-                            <button style={{ "flex": "1 1 auto" }} type="button" class="btn btn-primary">Reset</button>
+                            <button style={{ "flex": "1 1 auto" }} type="button" className="btn btn-primary">Reset</button>
                         </div>
                         <div>
 
-                            <button style={{ "flex": "1 1 auto" }} type="button" class="btn btn-success">Success</button>
+                            <button style={{ "flex": "1 1 auto" }} type="button" className="btn btn-success">Success</button>
                         </div>
                     </div>
                     {/* <hr /> */}

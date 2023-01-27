@@ -110,31 +110,7 @@ function ManageEmployee() {
       year: '1984',
       email:"Sneh@gamial.com"
 
-    },{
-      id: 5,
-      title: 'Ghostbusters',
-      year: '1984',
-      email:"Sneh@gamial.com"
-
-    },{
-      id: 5,
-      title: 'Ghostbusters',
-      year: '1984',
-      email:"Sneh@gamial.com"
-
-    },{
-      id: 5,
-      title: 'Ghostbusters',
-      year: '1984',
-      email:"Sneh@gamial.com"
-
-    },{
-      id: 5,
-      title: 'Ghostbusters',
-      year: '1984',
-      email:"Sneh@gamial.com"
-
-    },
+    }
   ]
 
 
@@ -173,7 +149,10 @@ function ManageEmployee() {
   return (
     <>
       {/* <h5 className="title"> Manage Employe</h5><hr /> */}
+      <div className='addEmployees' >
+        <h4>Manage Employees</h4>
 
+      </div>
           <div className="manageEmplotee">
 
             <DataTableExtensions

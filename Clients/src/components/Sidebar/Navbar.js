@@ -29,7 +29,7 @@ function Navbar() {
                             </li> <li className="nav-item">
                             </li> <li className="nav-item" style={{"display":"flex"}}>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVA_HrQLjkHiJ2Ag5RGuwbFeDKRLfldnDasw&usqp=CAU" className="rounded" alt="Cinque Terre" height={"40px"}/>
-                            <a class="nav-link" aria-current="page" href="#">Administor</a>
+                            <a className="nav-link" aria-current="page" href="#">Administor</a>
                             </li>
                     
                         </ul>

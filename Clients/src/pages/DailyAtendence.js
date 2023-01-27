@@ -137,7 +137,7 @@ function DailyAtendence() {
             <input type="date" />
           </div>
           <div className="SubmitBtn" style={{ "marginLeft": "50px", "marginTop": "20px" }}>
-            <button type="button" class="btn btn-success" style={{ "width": "180px" }}  >Submit</button>
+            <button type="button" className="btn btn-success" style={{ "width": "180px" }}  >Submit</button>
           </div>
         </div>
 
@@ -166,7 +166,7 @@ function DailyAtendence() {
         </DataTableExtensions>
       </div>
       <div className="SubmitBtn1" style={{ "textlign": "center", "marginTop": "10px" }}>
-        <button type="button" class="btn btn-success" style={{ "textlign": "center","width": "180px" }}  >Save changes</button>
+        <button type="button" className="btn btn-success" style={{ "textlign": "center","width": "180px" }}  >Save changes</button>
       </div>
     </>
   )

@@ -174,9 +174,7 @@ td, th {
 
 .manageEmplotee{
   border: 1px solid #e2d2d2;
-  /* padding-top: 50px; */
-  /* padding-left: 50px; */
-  /* padding-right: 50px; */  
+padding-top: 5px;
   text-align: end;
 }
 
@@ -186,14 +184,27 @@ td, th {
 
 .atendenceHeader{
   background-color: #fdfafa;
-  /* margin: 10px; */
+
   padding: 5px;
   box-shadow: 5px 10px #fdfafa;
 }
 
 .atendenceMain{
   background-color: #fdfafa;
-  margin: 10px;
+
   padding: 5px;
   box-shadow: 5px 10px #fdfafa;
+}
+
+.paysliplistMain{
+  background-color: #fdfafa;
+
+  padding: 5px;
+  box-shadow: 5px 10px #fdfafa; 
+}
+.addEmployees{
+   background-color: #fdfafa;
+  padding: 5px;
+  
+  box-shadow: 5px 10px #fdfafa; 
 }

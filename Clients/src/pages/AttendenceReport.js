@@ -42,7 +42,7 @@ const month =[1,2,3,4,5,6,7,8,9,10,11,12]
                         </select>
                     </div>
                     <div className="SubmitBtn" style={{ "marginLeft": "50px", "marginTop": "15px" }}>
-                        <button type="button" class="btn btn-success" style={{ "width": "180px" }}  >Show Reports</button>
+                        <button type="button" className="btn btn-success" style={{ "width": "180px" }}  >Show Reports</button>
                     </div>
                 </div>
 

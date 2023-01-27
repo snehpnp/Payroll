@@ -1,7 +1,7 @@
 import React from 'react'
 import DataTable from 'react-data-table-component';
 import DataTableExtensions from "react-data-table-component-extensions";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 function PayslipList() {
@@ -11,51 +11,57 @@ function PayslipList() {
   const columns = [
     {
       name: 'Serial',
-      width: '100px !important',
-      selector: (row,index) => index+1,
+      width: '90px !important',
+      selector: (row, index) => index + 1,
     },
     {
       name: 'Employee Name',
-      width: '160px !important',
+      width: '140px !important',
       selector: row => row.title,
     },
     {
-        name: 'Summery',
-        width: '160px !important',
-        selector: row => row.title,
-      }, {
-        name: 'Yea',
-        width: '160px !important',
-        selector: row => row.title,
-      },
-  
+      name: 'Summery',
+      width: '140px !important',
+      selector: row => row.title,
+    }, {
+      name: 'Year',
+      width: '100px !important',
+      selector: row => "2023",
+    },
+
     {
       name: 'Month',
-      width: '160px !important',
-      selector: row => row.year,
+      width: '80px !important',
+      selector: row => "March",
     },
     {
-        name: 'Status',
-        width: '160px !important',
-        selector: row => (row.status == 1 ?  <>
-          <button type="button" class="btn btn-warning" ><i class="fa-sharp fa-solid fa-xmark"></i>Unpaid</button>
-         </>:  <>
-          <button type="button" class="btn btn-primary" ><i className="fa-solid fa-pen-to-square" style={{"marginLeft":"10px"}}></i>Paid</button>
-         </>)
-        
-        ,
-      },
-   
+      name: 'Status',
+      width: '160px !important',
+      selector: row => (row.status == 1 ? <>
+        <button type="button" className="btn btn-warning" style={{"width":"100px","height":"30px","fontSize":"15px" }} ><i className="fa-sharp fa-solid fa-xmark"></i> Unpaid</button>
+      </> : <>
+        <button type="button" className="btn btn-primary" style={{"width":"100px","height":"30px","fontSize":"15px" }}><i className="fa-solid fa-pen-to-square" ></i> Paid</button>
+      </>)
+
+      ,
+    },
+
     {
       name: 'Option',
-      width: '120px !important',
+      width: '230px !important',
       cell: (row) => (
 
         <>
-         
-         <h6><i className="fa-solid fa-pen-to-square" style={{"marginLeft":"10px"}}></i></h6>
-         <h6> <i className="fa-solid fa-trash" style={{"marginLeft":"10px"}}></i></h6>
-          
+          <div className="form-group row">
+            <div className="col-md-5">
+              <button type="button" className="btn btn-info" style={{"width":"100px","height":"30px","fontSize":"15px"}} ><i className="fa-solid fa-tag"></i> Payslip</button>
+            </div>
+
+            <div className="col-md-5">
+              <button type="button" className="btn btn-danger"  style={{"width":"100px","height":"30px","fontSize":"15px"}} ><i className="fa-solid fa-trash" ></i>  Delete</button>
+            </div>
+          </div>
+
         </>
       ),
       ignoreRowClick: true,
@@ -69,45 +75,45 @@ function PayslipList() {
       id: 1,
       title: 'Beetlejuice',
       year: '1988',
-      email:"Sneh@gamial.com",
-      status:1
+      email: "Sneh@gamial.com",
+      status: 1
     },
     {
       id: 2,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com",
-      status:2
+      email: "Sneh@gamial.com",
+      status: 2
 
     },
     {
       id: 3,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com",
-      status:2
+      email: "Sneh@gamial.com",
+      status: 2
 
 
     }, {
       id: 4,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com",
-      status:1
+      email: "Sneh@gamial.com",
+      status: 1
 
     }, {
       id: 5,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com",
-      status:1
+      email: "Sneh@gamial.com",
+      status: 1
 
     },
     {
       id: 5,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
 
     },
   ]
@@ -119,14 +125,13 @@ function PayslipList() {
     headCells: {
       style: {
         fontWeight: '700',
-        marginTop:"10px" ,
-        // marginLeft:"2px" ,
+        marginTop: "10px",
 
         backgroundColor: 'rgb(240, 180, 14);',
         color: '#fff',
-        
 
-        justifyContent: 'center !important',
+
+        justifyContent: 'start !important',
         overflow: 'visible !important',
       },
     },
@@ -139,7 +144,8 @@ function PayslipList() {
       style: {
         overflow: 'visible !important',
         justifyContent: 'start !important',
-        textAlign:"right"
+       
+      
       },
     },
   };
@@ -149,7 +155,7 @@ function PayslipList() {
     <>
 
       <div className='payslipListeHeader' >
-        <h4>Payslip List</h4><hr />
+        <h4 > Payslip List</h4><hr />
         <div style={{ "display": "flex" }}>
 
 
@@ -176,7 +182,7 @@ function PayslipList() {
             </select>
           </div>
           <div className="SubmitBtn" style={{ "marginLeft": "50px", "marginTop": "15px" }}>
-            <button type="button" class="btn btn-success" style={{ "width": "180px" }}  >Show Reports</button>
+            <button type="button" className="btn btn-success" style={{ "width": "180px" }}  >Show Reports</button>
           </div>
         </div>
 
@@ -184,25 +190,27 @@ function PayslipList() {
 
       <div className="paysliplistMain">
 
-      <DataTableExtensions
-              columns={columns}
-              data={data}
-              export={false}
-              print={false}
-            >
-              <DataTable
-                fixedHeader
-                fixedHeaderScrollHeight="700px"
-                noHeader
-                defaultSortField="id"
-                defaultSortAsc={false}
-                pagination
-                customStyles={customStyles}
-                highlightOnHover
-                paginationRowsPerPageOptions={[5, 50, 100]}
-                paginationComponentOptions={{ selectAllRowsItem: true, selectAllRowsItemText: 'All' }}
-              />
-            </DataTableExtensions>
+        {/* <DataTableExtensions
+          columns={columns}
+          data={data}
+          export={false}
+          print={false}
+        > */}
+          <DataTable
+           columns={columns}
+           data={data}
+            fixedHeader
+            fixedHeaderScrollHeight="700px"
+            noHeader
+            // defaultSortField="id"
+            // defaultSortAsc={false}
+            pagination
+            customStyles={customStyles}
+            highlightOnHover
+            paginationRowsPerPageOptions={[5, 50, 100]}
+            paginationComponentOptions={{ selectAllRowsItem: true, selectAllRowsItemText: 'All' }}
+          />
+        {/* </DataTableExtensions> */}
       </div>
 
     </>

@@ -14,10 +14,10 @@ const AddEmployee = () => {
   }
   return (
     <>
-      <div className="title"> Add Employee</div>
+      <div className='addEmployees' >
+        <h4>Add Employees</h4><hr />
 
-      <br /><br />
-
+      </div>
 
       <div className="container">
         <div className="row">
@@ -103,7 +103,7 @@ const AddEmployee = () => {
                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div className="form-group">
                     <label className="profile_details_text">Local Address:</label>
-                    {/* <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> */}
+                    {/* <label for="exampleFormControlTextarea1" className="form-label">Example textarea</label> */}
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
                 </div>
