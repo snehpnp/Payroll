@@ -19,9 +19,9 @@
 .main-container {
   display: flex;
 }
-main {
+/* main {
   padding: 10px;
-}
+} */
 
 .title {
   font-size: 3rem;
