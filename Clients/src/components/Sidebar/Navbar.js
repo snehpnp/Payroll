@@ -14,13 +14,25 @@ function Navbar() {
                         
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
+                            {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
                         </form>
 
 
-                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVA_HrQLjkHiJ2Ag5RGuwbFeDKRLfldnDasw&usqp=CAU" className="rounded" alt="Cinque Terre" height={"50px"}/>
+                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0" style={{"paddingLeft":"200px !important"}}>
+                        <li className="nav-item">
+                            </li> <li className="nav-item">
+                            </li> <li className="nav-item">
+                            </li> <li className="nav-item">
+                            </li> <li className="nav-item">
+                            </li> <li className="nav-item">
+                            </li> <li className="nav-item">
+                            </li> <li className="nav-item">
+                            </li> <li className="nav-item">
+                            </li> <li className="nav-item">
+                            </li> <li className="nav-item">
+                            </li> <li className="nav-item" style={{"display":"flex"}}>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVA_HrQLjkHiJ2Ag5RGuwbFeDKRLfldnDasw&usqp=CAU" className="rounded" alt="Cinque Terre" height={"40px"}/>
+                            <a class="nav-link" aria-current="page" href="#">Administor</a>
                             </li>
                     
                         </ul>

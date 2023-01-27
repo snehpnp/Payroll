@@ -12,6 +12,9 @@ import AddEmployee from "./pages/AddEmployee";
 import ManageEmployees from "./pages/ManageEmployee";
 import View from "./pages/View";
 
+import AddDepartment from "./pages/AddDepartment"; 
+import ManageDepartment from "./pages/ManageDepartment";
+
 
 import Messages from "./pages/Messages";
 import FileManager from "./pages/FileManager";
@@ -32,6 +35,11 @@ function App() {
             <Route path="/employee/add" element={<AddEmployee />} />
             <Route path="/employee/manage" element={<ManageEmployees />} />
             <Route path="/employee/view" element={<View />} />
+
+            <Route path="/department/add" element={<AddDepartment />} />
+            <Route path="/department/manage" element={<ManageDepartment />} />
+
+
 
 
 
