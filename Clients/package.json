@@ -9,6 +9,7 @@
     "bootstrap": "^5.2.3",
     "framer-motion": "^6.2.3",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.7.0",
     "react-data-table-component": "^7.5.3",
     "react-data-table-component-extensions": "^1.6.0",
     "react-dom": "^17.0.2",

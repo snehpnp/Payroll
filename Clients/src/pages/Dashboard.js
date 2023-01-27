@@ -1,4 +1,4 @@
-import './dashboard.css'
+import '../dashboard.css'
 const Dashboard = () => {
   const style = {
 

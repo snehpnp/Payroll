@@ -15,6 +15,8 @@ import View from "./pages/View";
 import AddDepartment from "./pages/AddDepartment"; 
 import ManageDepartment from "./pages/ManageDepartment";
 
+import DailyAtendence from "./pages/DailyAtendence";
+import AttendenceReport from "./pages/AttendenceReport";
 
 import Messages from "./pages/Messages";
 import FileManager from "./pages/FileManager";
@@ -38,6 +40,11 @@ function App() {
 
             <Route path="/department/add" element={<AddDepartment />} />
             <Route path="/department/manage" element={<ManageDepartment />} />
+
+            <Route path="/attendence/daily" element={<DailyAtendence />} />
+            <Route path="/attendence/report" element={<AttendenceReport />} />
+
+
 
 
 

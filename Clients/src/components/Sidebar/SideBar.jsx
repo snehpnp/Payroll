@@ -64,8 +64,8 @@ const routes = [
         icon: <FaUser />,
       },
       {
-        path: "/department/manage",
-        name: "Manage Department",
+        path: "attendence/report",
+        name: "Attendece Report",
         icon: <FaLock />,
       },
    
