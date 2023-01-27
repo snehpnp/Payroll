@@ -37,7 +37,7 @@ function AddDepartment() {
                         </tr>
                     </table>
 
-                    <hr />
+                    {/* <hr /> */}
                     <div id="flexbox" style={{ "textAlign": "center", "gap": "5px" }}>
                         <div>
                             <button style={{ "flex": "1 1 auto" }} type="button" class="btn btn-light">Cancel</button>
@@ -50,7 +50,7 @@ function AddDepartment() {
                             <button style={{ "flex": "1 1 auto" }} type="button" class="btn btn-success">Success</button>
                         </div>
                     </div>
-                    <hr />
+                    {/* <hr /> */}
 
 
                 </div>

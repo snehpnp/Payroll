@@ -163,7 +163,11 @@ function ManageDepartment() {
 
   return (
     <>
-      {/* <h5 className="title"> Manage Employe</h5><hr /> */}
+      <div className='atendenceHeader' >
+        <h4>Manage Employe</h4><hr />
+     
+
+      </div>
 
           <div className="manageDeparment">
       
