@@ -1,7 +1,9 @@
 import React from 'react';
 import DataTable from 'react-data-table-component';
 import DataTableExtensions from "react-data-table-component-extensions";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+
+import Card from 'react-bootstrap/Card';
 
 function ManageDepartment() {
   const navigate = useNavigate();
@@ -10,7 +12,7 @@ function ManageDepartment() {
     {
       name: 'Serial',
       width: '100px !important',
-      selector: (row,index) => index+1,
+      selector: (row, index) => index + 1,
     },
     {
       name: 'Department',
@@ -18,36 +20,36 @@ function ManageDepartment() {
       selector: row => row.title,
     },
     {
-        name: 'Department',
-        width: '160px !important',
-        selector: row => row.title,
-      }, {
-        name: 'Department',
-        width: '160px !important',
-        selector: row => row.title,
-      },
-  
+      name: 'Department',
+      width: '160px !important',
+      selector: row => row.title,
+    }, {
+      name: 'Department',
+      width: '160px !important',
+      selector: row => row.title,
+    },
+
     {
       name: 'Designation',
       width: '160px !important',
       selector: row => row.year,
     },
     {
-        name: 'Total Employee',
-        width: '160px !important',
-        selector: row => row.title,
-      },
-   
+      name: 'Total Employee',
+      width: '160px !important',
+      selector: row => row.title,
+    },
+
     {
       name: <h6>Actions</h6>,
       width: '120px !important',
       cell: (row) => (
 
         <>
-         
-         <h6><i className="fa-solid fa-pen-to-square" style={{"marginLeft":"10px"}}></i></h6>
-         <h6> <i className="fa-solid fa-trash" style={{"marginLeft":"10px"}}></i></h6>
-          
+
+          <h6><i className="fa-solid fa-pen-to-square" style={{ "marginLeft": "10px" }}></i></h6>
+          <h6> <i className="fa-solid fa-trash" style={{ "marginLeft": "10px" }}></i></h6>
+
         </>
       ),
       ignoreRowClick: true,
@@ -61,69 +63,69 @@ function ManageDepartment() {
       id: 1,
       title: 'Beetlejuice',
       year: '1988',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
     },
     {
       id: 2,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
 
     },
     {
       id: 3,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
 
     }, {
       id: 4,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
 
     }, {
       id: 5,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
 
     },
     {
       id: 5,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
 
-    },{
+    }, {
       id: 5,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
 
-    },{
+    }, {
       id: 5,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
 
-    },{
+    }, {
       id: 5,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
 
-    },{
+    }, {
       id: 5,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
 
-    },{
+    }, {
       id: 5,
       title: 'Ghostbusters',
       year: '1984',
-      email:"Sneh@gamial.com"
+      email: "Sneh@gamial.com"
 
     },
   ]
@@ -135,27 +137,27 @@ function ManageDepartment() {
     headCells: {
       style: {
         fontWeight: '700',
-        marginTop:"10px" ,
+        marginTop: "10px",
         // marginLeft:"2px" ,
 
         backgroundColor: 'rgb(240, 180, 14);',
         color: '#fff',
-        
 
-        justifyContent: 'center !important',
+
+        justifyContent: 'left !important',
         overflow: 'visible !important',
       },
     },
     rows: {
       style: {
-        justifyContent: 'center !important',
+        justifyContent: 'left !important',
       },
     },
     cells: {
       style: {
         overflow: 'visible !important',
-        justifyContent: 'center !important',
-        textAlign:"right"
+        justifyContent: 'left !important',
+        textAlign: "left"
       },
     },
   };
@@ -163,14 +165,10 @@ function ManageDepartment() {
 
   return (
     <>
-      <div className='atendenceHeader' >
-        <h4>Manage Employe</h4><hr />
-     
 
-      </div>
-
-          <div className="manageDeparment">
-      
+      <Card>
+        <Card.Body>
+          <Card.Text>
             <DataTableExtensions
               columns={columns}
               data={data}
@@ -190,10 +188,10 @@ function ManageDepartment() {
                 paginationComponentOptions={{ selectAllRowsItem: true, selectAllRowsItemText: 'All' }}
               />
             </DataTableExtensions>
+          </Card.Text>
 
-
-          </div>
-      
+        </Card.Body>
+      </Card>
     </>
   )
 }

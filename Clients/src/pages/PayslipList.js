@@ -2,6 +2,8 @@ import React from 'react'
 import DataTable from 'react-data-table-component';
 import DataTableExtensions from "react-data-table-component-extensions";
 import { useNavigate } from "react-router-dom"
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 
 function PayslipList() {
@@ -38,9 +40,9 @@ function PayslipList() {
       name: 'Status',
       width: '160px !important',
       selector: row => (row.status == 1 ? <>
-        <button type="button" className="btn btn-warning" style={{"width":"100px","height":"30px","fontSize":"15px" }} ><i className="fa-sharp fa-solid fa-xmark"></i> Unpaid</button>
+        <button type="button" className="btn btn-warning" style={{ "width": "100px", "height": "30px", "fontSize": "15px" }} ><i className="fa-sharp fa-solid fa-xmark"></i> Unpaid</button>
       </> : <>
-        <button type="button" className="btn btn-primary" style={{"width":"100px","height":"30px","fontSize":"15px" }}><i className="fa-solid fa-pen-to-square" ></i> Paid</button>
+        <button type="button" className="btn btn-primary" style={{ "width": "100px", "height": "30px", "fontSize": "15px" }}><i className="fa-solid fa-pen-to-square" ></i> Paid</button>
       </>)
 
       ,
@@ -54,11 +56,11 @@ function PayslipList() {
         <>
           <div className="form-group row">
             <div className="col-md-5">
-              <button type="button" className="btn btn-info" style={{"width":"100px","height":"30px","fontSize":"15px"}} ><i className="fa-solid fa-tag"></i> Payslip</button>
+              <button type="button" className="btn btn-info" style={{ "width": "100px", "height": "30px", "fontSize": "15px" }} ><i className="fa-solid fa-tag"></i> Payslip</button>
             </div>
 
             <div className="col-md-5">
-              <button type="button" className="btn btn-danger"  style={{"width":"100px","height":"30px","fontSize":"15px"}} ><i className="fa-solid fa-trash" ></i>  Delete</button>
+              <button type="button" className="btn btn-danger" style={{ "width": "100px", "height": "30px", "fontSize": "15px" }} ><i className="fa-solid fa-trash" ></i>  Delete</button>
             </div>
           </div>
 
@@ -131,21 +133,21 @@ function PayslipList() {
         color: '#fff',
 
 
-        justifyContent: 'start !important',
+        justifyContent: 'center !important',
         overflow: 'visible !important',
       },
     },
     rows: {
       style: {
-        justifyContent: 'center !important',
+        justifyContent: 'start !important',
       },
     },
     cells: {
       style: {
         overflow: 'visible !important',
-        justifyContent: 'start !important',
-       
-      
+        justifyContent: 'center !important',
+
+
       },
     },
   };
@@ -154,64 +156,69 @@ function PayslipList() {
   return (
     <>
 
-      <div className='payslipListeHeader' >
-        <h4 > Payslip List</h4><hr />
-        <div style={{ "display": "flex" }}>
 
 
 
-          <div className="yearBox" style={{ "marginLeft": "50px" }}>
-            <label htmlFor="year">Year :</label><br />
-            <select id="cars" name="cars" style={{ "width": "150px" }}>
-              <option value="volvo">2023</option>
-              <option value="volvo">2024</option>
-              <option value="volvo">2025</option>
+
+      <Card>
+        <Card.Body>
+      <Card.Title>Search Paylist <hr /></Card.Title>
+          <Card.Text>
+            <div style={{ "display": "flex" }}>
+
+              <div className="yearBox" style={{ "marginLeft": "50px" }}>
+                <label htmlFor="year">Year :</label><br />
+                <select id="cars" name="cars" style={{ "width": "150px" }}>
+                  <option value="volvo">2023</option>
+                  <option value="volvo">2024</option>
+                  <option value="volvo">2025</option>
 
 
-            </select>
-          </div>
-          <div className="monthBox" style={{ "marginLeft": "50px" }}>
-            <label htmlFor="cars">Month :</label><br />
-            <select id="cars" name="cars" style={{ "width": "150px" }}>
-              {
-                month.map((val) => {
-                  return <option value={val}>{val}</option>
-                })
-              }
+                </select>
+              </div>
+              <div className="monthBox" style={{ "marginLeft": "50px" }}>
+                <label htmlFor="cars">Month :</label><br />
+                <select id="cars" name="cars" style={{ "width": "150px" }}>
+                  {
+                    month.map((val) => {
+                      return <option value={val}>{val}</option>
+                    })
+                  }
 
-            </select>
-          </div>
-          <div className="SubmitBtn" style={{ "marginLeft": "50px", "marginTop": "15px" }}>
-            <button type="button" className="btn btn-success" style={{ "width": "180px" }}  >Show Reports</button>
-          </div>
-        </div>
+                </select>
+              </div>
+              <div className="SubmitBtn" style={{ "marginLeft": "50px", "marginTop": "15px" }}>
+                <button type="button" className="btn btn-success" style={{ "width": "180px" }}  >Show Reports</button>
+              </div>
+            </div>
+          </Card.Text>
+        </Card.Body>
+      </Card>
 
-      </div>
 
-      <div className="paysliplistMain">
+      <Card>
 
-        {/* <DataTableExtensions
-          columns={columns}
-          data={data}
-          export={false}
-          print={false}
-        > */}
-          <DataTable
-           columns={columns}
-           data={data}
-            fixedHeader
-            fixedHeaderScrollHeight="700px"
-            noHeader
-            // defaultSortField="id"
-            // defaultSortAsc={false}
-            pagination
-            customStyles={customStyles}
-            highlightOnHover
-            paginationRowsPerPageOptions={[5, 50, 100]}
-            paginationComponentOptions={{ selectAllRowsItem: true, selectAllRowsItemText: 'All' }}
-          />
-        {/* </DataTableExtensions> */}
-      </div>
+        <Card.Body>
+          <Card.Text>
+            <DataTable
+              columns={columns}
+              data={data}
+              fixedHeader
+              fixedHeaderScrollHeight="700px"
+              noHeader
+
+              pagination
+              customStyles={customStyles}
+              highlightOnHover
+              paginationRowsPerPageOptions={[5, 50, 100]}
+              paginationComponentOptions={{ selectAllRowsItem: true, selectAllRowsItemText: 'All' }}
+            />
+          </Card.Text>
+        </Card.Body>
+      </Card>
+
+
+
 
     </>
   )

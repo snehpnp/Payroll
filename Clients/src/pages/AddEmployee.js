@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+
+import Card from 'react-bootstrap/Card';
+
+
 const AddEmployee = () => {
 
   const [txt, setTxt] = useState('');
@@ -14,13 +18,14 @@ const AddEmployee = () => {
   }
   return (
     <>
-      <div className='addEmployees' >
-        <h4>Add Employees</h4><hr />
-
-      </div>
-
-      <div className="container">
-        <div className="row">
+  
+  <Card>    
+  {/* <Card.Header><h3>Create Employees</h3></Card.Header> */}
+  
+        <Card.Body>
+          <Card.Text>
+          <div className="container">
+        <div className="row" style={{"width":"100%"}}>
 
           {/* Personal Information */}
           <div className="col-sm-6 edit_information" >
@@ -430,6 +435,12 @@ const AddEmployee = () => {
 
         </div>
       </div>
+          </Card.Text>
+        
+        </Card.Body>
+      </Card>
+
+    
 
 
     </>

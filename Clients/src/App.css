@@ -1,8 +1,8 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
+}
 
 .container{
 
@@ -34,7 +34,9 @@
   background: rgb(94, 109, 216);
   color: white;
   height: 100vh;
-  overflow-y: auto;
+  overflow-y: scroll;
+  z-index: 9;
+  position: fixed;
 }
 
 .top_section {
@@ -207,4 +209,24 @@ padding-top: 5px;
   padding: 5px;
   
   box-shadow: 5px 10px #fdfafa; 
+}
+
+
+.navbar-toggler{
+  display: none;
+}
+
+.mainRight {
+  width: calc(100% - 250px) !important;
+  margin: 0 0 0 auto !important;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sidebar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

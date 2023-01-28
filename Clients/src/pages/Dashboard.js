@@ -1,4 +1,7 @@
 import '../dashboard.css'
+
+
+
 const Dashboard = () => {
   const style = {
 
@@ -8,11 +11,10 @@ const Dashboard = () => {
 
   return (
     <>
-  <div className='payslipListeHeader' >
-        <h4 style={{"marginLeft":"20px"}}> Payslip List</h4><hr />
-    
 
-        <div id="root">
+
+
+      <div id="root">
         <div className="container pt-5">
           <div className="row align-items-stretch">
 
@@ -33,7 +35,7 @@ const Dashboard = () => {
               <div className="wrap">
                 <h4 className="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Present Today
                 </h4><span className="hind-font caption-12 c-dashboardInfo__count">4 <i class="fa-solid fa-user"></i>
-</span>
+                </span>
               </div>
             </div>
             <div className="c-dashboardInfo col-lg-3 col-md-6">
@@ -47,9 +49,9 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      </div>
 
-    
+
+
 
     </>
   )

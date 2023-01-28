@@ -1,39 +1,34 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import SideBar from "./components/Sidebar/SideBar";
-import Navbar from "./components/Sidebar/Navbar";
+
+import SideBar from "../components/Sidebar/SideBar";
+import Navbar from "../components/Sidebar/Navbar";
 
 
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "../pages/Dashboard";
 
-import AddEmployee from "./pages/AddEmployee";
-import ManageEmployees from "./pages/ManageEmployee";
-import View from "./pages/View";
+import AddEmployee from "../pages/AddEmployee";
+import ManageEmployees from "../pages/ManageEmployee";
+import View from "../pages/View";
 
-import AddDepartment from "./pages/AddDepartment"; 
-import ManageDepartment from "./pages/ManageDepartment";
+import AddDepartment from "../pages/AddDepartment"; 
+import ManageDepartment from "../pages/ManageDepartment";
 
-import DailyAtendence from "./pages/DailyAtendence";
-import AttendenceReport from "./pages/AttendenceReport";
+import DailyAtendence from "../pages/DailyAtendence";
+import AttendenceReport from "../pages/AttendenceReport";
 
-import AddLeave from "./pages/AddLeave";
-import ManageLeave from "./pages/ManageLeave";
+import AddLeave from "../pages/AddLeave";
+import ManageLeave from "../pages/ManageLeave";
 
-import AddPayslip from "./pages/AddPayslip";
-import PayslipList from "./pages/PayslipList";
-
-
-import Wrapper from "./pages/Wrapper";
-
-function App() {
+import AddPayslip from "../pages/AddPayslip";
+import PayslipList from "../pages/PayslipList";
+function Wrapper() {
   return (
-    <> 
-<Wrapper />
-
-
-      {/* <Router>
-      <SideBar>
+   <>
+   
+   
+   
+   <Router>
+        <SideBar>
       <Navbar/>
           <Routes>
             <Route path="/" element={<Dashboard />} />
@@ -54,13 +49,17 @@ function App() {
             <Route path="payslip/list" element={<PayslipList />} />
        
 
+
+
             <Route path="*" element={<> not found</>} />
           </Routes>
-        </SideBar>
-      </Router> */}
-    </>
-
-  );
+          </SideBar>
+    
+      </Router>
+   
+   
+   </>
+  )
 }
 
-export default App;
+export default Wrapper

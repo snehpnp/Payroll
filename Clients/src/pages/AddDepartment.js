@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom"
+
+import Card from 'react-bootstrap/Card';
+
 
 function AddDepartment() {
 
     const [refresh, setrefresh] = useState(false)
-
-
-
-
 
 
     useEffect(() => {
@@ -17,14 +17,13 @@ function AddDepartment() {
 
     return (
         <>
-            <div className='AddDepartment'>
+    
+    <Card>
 
-                <h4>Create Department <hr /></h4>
-
-
-
-
-                <div className='AddDepartmentbox'>
+    <Card.Header>Create Deparment</Card.Header>
+        <Card.Body>
+          <Card.Text>
+          <div className='AddDepartmentbox'>
                     <table>
                         <tr>
                             <td>Department*</td>
@@ -56,10 +55,18 @@ function AddDepartment() {
                 </div>
 
 
+          </Card.Text>
+
+        </Card.Body>
+      </Card>
 
 
 
-            </div>
+               
+
+
+
+
         </>
     )
 }

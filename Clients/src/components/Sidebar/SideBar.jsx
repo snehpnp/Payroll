@@ -196,7 +196,7 @@ const SideBar = ({ children }) => {
       <div className="main-container">
         <motion.div
           animate={{
-            width: isOpen ? "200px" : "45px",
+            width: isOpen ? "250px" : "45px",
 
             transition: {
               duration: 0.5,
@@ -206,6 +206,7 @@ const SideBar = ({ children }) => {
           }}
           className={`sidebar `}
         >
+          <div>
           <div className="top_section">
             <AnimatePresence>
               {isOpen && (
@@ -281,9 +282,10 @@ const SideBar = ({ children }) => {
               );
             })}
           </section>
+          </div>
         </motion.div>
 
-        <main>{children}</main>
+        <main className="container-fluid mainRight">{children}</main>
       </div>
     </>
   );

@@ -2,6 +2,12 @@ import React from 'react';
 import DataTable from 'react-data-table-component';
 import DataTableExtensions from "react-data-table-component-extensions";
 import { useNavigate } from "react-router-dom"
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 function DailyAtendence() {
 
@@ -12,7 +18,8 @@ function DailyAtendence() {
       width: '100px !important',
       selector: (row, index) => index + 1,
     },
-    {
+   
+   {
       name: 'Employee Name',
       width: '160px !important',
       selector: row => row.title,
@@ -118,56 +125,77 @@ function DailyAtendence() {
 
   return (
     <>
+    
+
+      <Card>
+
+        <Card.Body>
+          <Card.Title> </Card.Title>
+          <Card.Text>
+
+            <Container>
+              <Row>
+                <Col sm>
+                  <label htmlFor="cars"> Department:</label><br />
+                  <select id="cars" name="cars">
+                    <option value="volvo">All Employees</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </Col>
+
+                <Col sm>
+                  <label htmlFor="cars">Date :</label><br />
+                  <input type="date" />
+                </Col>
+
+                <Col sm>
+                <label htmlFor="cars">Submit :</label><br />
+                  <button type="button" className="btn btn-success">Submit</button>
+                </Col>
+              </Row>
+
+            </Container>
+        
+          </Card.Text>
+
+        </Card.Body>
+      </Card>
+      <br />
 
 
-      <div className='atendenceHeader' >
-        <h4> Daily Atendence</h4><hr />
-        <div style={{ "display": "flex" }}>
-          <div className="empDep">
-            <label htmlFor="cars"> Employee By Department:</label><br />
-            <select id="cars" name="cars">
-              <option value="volvo">All Employees</option>
-              <option value="saab">Saab</option>
-              <option value="fiat">Fiat</option>
-              <option value="audi">Audi</option>
-            </select>
-          </div>
-          <div className="datepicker" style={{ "marginLeft": "50px" }}>
-            <label htmlFor="cars">Date :</label><br />
-            <input type="date" />
-          </div>
-          <div className="SubmitBtn" style={{ "marginLeft": "50px", "marginTop": "20px" }}>
-            <button type="button" className="btn btn-success" style={{ "width": "180px" }}  >Submit</button>
-          </div>
-        </div>
 
-      </div>
+      <Card>
+        <Card.Body>
+          <Card.Title> <div className='atendenceHeader' >
 
-      <div className='atendenceHeader' >
 
-        <DataTableExtensions
-          columns={columns}
-          data={data}
-          export={false}
-          print={false}
-        >
-          <DataTable
-            fixedHeader
-            fixedHeaderScrollHeight="700px"
-            noHeader
-            defaultSortField="id"
-            defaultSortAsc={false}
-            // pagination
-            customStyles={customStyles}
-            highlightOnHover
-            // paginationRowsPerPageOptions={[5, 50, 100]}
-            paginationComponentOptions={{ selectAllRowsItem: true, selectAllRowsItemText: 'All' }}
-          />
-        </DataTableExtensions>
-      </div>
-      <div className="SubmitBtn1" style={{ "textlign": "center", "marginTop": "10px" }}>
-        <button type="button" className="btn btn-success" style={{ "textlign": "center","width": "180px" }}  >Save changes</button>
-      </div>
+
+          </div></Card.Title>
+          <Card.Text>
+           
+            <DataTable
+              columns={columns}
+              data={data}
+              fixedHeader
+              fixedHeaderScrollHeight="700px"
+              noHeader
+              defaultSortField="id"
+              defaultSortAsc={false}
+              pagination
+              customStyles={customStyles}
+              highlightOnHover
+              paginationRowsPerPageOptions={[5, 50, 100]}
+              paginationComponentOptions={{ selectAllRowsItem: true, selectAllRowsItemText: 'All' }}
+            />
+         
+          </Card.Text>
+          <Button variant="primary">Save changes</Button>
+        </Card.Body>
+      </Card>
+
+
     </>
   )
 }
