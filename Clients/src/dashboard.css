@@ -10,6 +10,7 @@
     overflow: hidden;
     padding: 40px 25px 20px;
     height: 100%;
+    width: 250px;
   }
   .c-dashboardInfo__title,
   .c-dashboardInfo__subInfo {
